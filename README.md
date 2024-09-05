@@ -1,2 +1,6 @@
-# catppuccin-mocha-olivetin
-Cattpuccin Mocha theme for Olivetin
+# Catppuccin Mocha Theme for Olivetin
+Using the wonderfull [cattpuccin color palette](https://catppuccin.com/)
+
+To change the accent colour on the theme, replace the line `--color-accent: #89b4fa;` on the 3 line for any other of your liking, to check the full palette [click here](https://catppuccin.com/palette#flavor-mocha)
+
+![Screenshot of the theme](cover.png "Screenshot")
