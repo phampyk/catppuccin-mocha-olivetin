@@ -194,6 +194,11 @@ button:disabled, input[type="submit"]:disabled{
   background-color: var(--color-dark);
 }
 
+button:hover{
+  color: var(--color-font);
+  background-color: var(--color-overlay-0);
+}
+
 /* START BUTTON */
 
 input[name="start"]:hover{
@@ -398,6 +403,8 @@ span.tag {
   background-color: var(--color-font);
 }
 
+/* USERNAME */
+
 #link-login > a {
   color: var(--color-font);
   text-decoration: none;
@@ -425,7 +432,7 @@ span.tag {
   color: var(--color-accent);
 }
 
-#link-loout > a:focus {
+#link-logout > a:focus {
   color: var(--color-background);
   background-color: var(--color-accent);
   outline: 0;
