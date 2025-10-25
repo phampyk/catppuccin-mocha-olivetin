@@ -1,6 +1,6 @@
 :root {
   --color-primary: #11111b;
-  --color-accent: #89b4fa;
+  --color-accent: #94e2d5;
   --color-background: #1e1e2e;
   --color-font: #cdd6f4;
   --color-red: #f38ba8;
@@ -11,6 +11,7 @@
   --color-surface-2: #585b70;
   --color-surface-2-7: rgba(88,91,112,0.7);
   --color-mantle: #181825;
+  --color-overlay-0: #6c7086;
 }
 
 body{
@@ -32,7 +33,7 @@ footer a{
 
 a{
   color: var(--color-font);
-  text-decoration-style: none;
+  text-decoration: none;
   margin-bottom: 5px;
 }
 
@@ -117,6 +118,11 @@ nav ul li a:focus{
 	background-color: var(--color-accent);
 	color: var(--color-background);
   outline: 0;
+}
+
+nav ul li a.selected{
+  background-color: var(--color-surface-2);
+  color: var(--color-background);
 }
 
 #sidebar-toggler-button{
@@ -301,13 +307,26 @@ input:focus {
   outline: 2px solid var(--color-surface-2);
 }
 
+.box-shadow p {
+  background-color: var(--color-primary);
+}
+
 /* LOGS SEARCH */
 
+label.input-with-icons{
+  background-color: var(--color-background);
+  border: none;
+  gap: 0.5em; 
+}
+
+label.input-with-icons svg{
+  color: var(--color-background);
+  background-color: var(--color-overlay-0);
+  border-radius: 50%;
+  padding: 0.1em;
+}
+
 input#logSearchBox{
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 64 64'%3E%3Cg fill='%236c7086'%3E%3Cpath d='M8.25 10.875a2.625 2.625 0 1 1 5.25 0a2.625 2.625 0 0 1-5.25 0'/%3E%3Cpath fill-rule='evenodd' d='M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75s9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m-1.125 4.5a4.125 4.125 0 1 0 2.338 7.524l2.007 2.006a.75.75 0 1 0 1.06-1.06l-2.006-2.007a4.125 4.125 0 0 0-3.399-6.463' clip-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E");
-	background-position: 2px 4px;
-	background-repeat: no-repeat;
-	padding-left: 40px;
 	background-color: var(--color-primary);
 	color: var(--color-font);
 	border: none;
@@ -320,7 +339,11 @@ button#searchLogsClear{
 	background-color: var(--color-accent);
 	font-weight: 900;
 	border-radius: 15px;
-  border-color: var(--color-surface-2);
+}
+
+button#searchLogsClear svg{
+  color: var(--color-background);
+	background-color: transparent;
 }
 
 button#searchLogsClear:hover, button#searchLogsClear:focus{
@@ -328,7 +351,6 @@ button#searchLogsClear:hover, button#searchLogsClear:focus{
 	background-color: var(--color-red);
 	font-weight: 900;
 	border-radius: 15px;
-  border:3px solid var(--color-surface-2);
   outline: none;
 }
 
@@ -376,6 +398,46 @@ span.tag {
   background-color: var(--color-font);
 }
 
+#link-login > a {
+  color: var(--color-font);
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+#link-login > a:hover {
+  color: var(--color-accent);
+}
+
+#link-login > a:focus {
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  outline: 0;
+  border-radius: 2px;
+}
+
+#link-logout > a {
+  color: var(--color-font);
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+#link-logout > a:hover {
+  color: var(--color-accent);
+}
+
+#link-loout > a:focus {
+  color: var(--color-background);
+  background-color: var(--color-accent);
+  outline: 0;
+  border-radius: 2px;
+}
+
 span#username {
-  display: none;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+div.userinfo{
+  color: var(--color-font);
+  font-size: medium;
 }
